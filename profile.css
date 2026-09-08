@@ -1,28 +1,45 @@
-<header class="hero">
-  <div class="container hero-content">
-    <div class="hero-text">
-      <p class="label">PORTFOLIO / SOFTWARE TESTER</p>
+.hero {
+  padding: 65px 0;
+}
 
-      <h1>Nguyen Khac Trieu</h1>
+.hero h1 {
+  font-size: clamp(40px, 4.8vw, 58px);
+  line-height: 1.05;
+}
 
-      <p class="subtitle">Intern / Fresher Software Tester</p>
+.hero-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 180px;
+  gap: 60px;
+  align-items: center;
+}
 
-      <p class="target">
-        <b>Career target:</b> Applying for an Intern/Fresher Software Tester
-        position to apply software testing knowledge, ensure product quality,
-        and develop deeply in QA/QC.
-      </p>
+.hero-text {
+  max-width: 700px;
+}
 
-      <div class="buttons">
-        <a href="mailto:khactrieu04@gmail.com">Contact me</a>
-        <a class="secondary" href="#projects">View project</a>
-      </div>
-    </div>
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border: 6px solid #cbed54;
+  border-radius: 50%;
+  box-shadow: 14px 14px 0 #527226;
+}
 
-    <img
-      class="profile-photo"
-      src="./img/avt.jpg"
-      alt="Nguyen Khac Trieu"
-    />
-  </div>
-</header>
+@media (max-width: 700px) {
+  .hero {
+    padding: 55px 0;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .profile-photo {
+    width: 145px;
+    height: 145px;
+    grid-row: 1;
+  }
+}

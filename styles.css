@@ -15,7 +15,7 @@ body {
   background: var(--paper);
   color: var(--ink);
   font:
-    16px/1.7 Arial,
+    17px/1.7 Arial,
     sans-serif;
 }
 .container {
@@ -27,6 +27,20 @@ body {
   background: var(--ink);
   color: #fff;
   padding: 105px 0 90px;
+}
+.hero-content {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  align-items: center;
+  gap: 60px;
+}
+.profile-photo {
+  order: -1;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 4px solid #cbed54;
+  border-radius: 50%;
 }
 .label {
   font: 11px/1.4 monospace;
@@ -157,6 +171,14 @@ ul {
   }
   .hero {
     padding: 70px 0;
+  }
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .profile-photo {
+    width: 180px;
+    justify-self: start;
   }
   .profile-grid,
   .skills,
