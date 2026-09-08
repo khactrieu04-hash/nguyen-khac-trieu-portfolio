@@ -43,3 +43,31 @@
     grid-row: 1;
   }
 }
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #172018;
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(23, 32, 24, 0.7);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}

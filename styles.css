@@ -3,6 +3,7 @@
   --paper: #f5f3ec;
   --green: #527226;
   --line: #ccd3c9;
+  --black: #000;
 }
 * {
   box-sizing: border-box;
@@ -75,9 +76,9 @@ body {
   box-shadow: 0 0 0 8px rgba(203, 237, 84, 0.18);
 }
 .label {
-  font: 11px/1.4 monospace;
+  font: 30px/1.4 monospace;
   letter-spacing: 0.1em;
-  color: var(--green);
+  color: var(--black);
   font-weight: bold;
 }
 .hero .label {
