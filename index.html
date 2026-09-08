@@ -240,5 +240,63 @@
         <p>Nguyen Khac Trieu | Software Tester</p>
       </div>
     </footer>
+
+    <aside class="contact-widget" aria-label="Contact menu">
+      <div class="contact-panel" hidden>
+        <div class="contact-panel-header">
+          <strong>Contact me</strong>
+          <button class="contact-close" type="button" aria-label="Đóng menu">
+            ×
+          </button>
+        </div>
+        <div class="contact-links">
+          <a href="./zalo-qr.html" target="_blank" rel="noreferrer">
+            <img
+              src="https://cdn.simpleicons.org/zalo/FFFFFF"
+              alt=""
+              aria-hidden="true"
+            />
+            <span>Zalo</span>
+          </a>
+          <a
+            href="https://www.facebook.com/trieu.khac.3745"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src="https://cdn.simpleicons.org/facebook/FFFFFF"
+              alt=""
+              aria-hidden="true"
+            />
+            <span>Facebook</span>
+          </a>
+          <a href="mailto:khactrieu04@gmail.com">
+            <span class="email-icon" aria-hidden="true">@</span>
+            <span>Email</span>
+          </a>
+        </div>
+      </div>
+      <button class="contact-toggle" type="button" aria-expanded="false">
+        <span class="contact-pulse" aria-hidden="true"></span>
+        <span>Contact</span>
+      </button>
+    </aside>
+
+    <script>
+      const contactToggle = document.querySelector(".contact-toggle");
+      const contactPanel = document.querySelector(".contact-panel");
+      const contactClose = document.querySelector(".contact-close");
+
+      contactToggle.addEventListener("click", () => {
+        const isOpen = contactToggle.getAttribute("aria-expanded") === "true";
+        contactToggle.setAttribute("aria-expanded", String(!isOpen));
+        contactPanel.hidden = isOpen;
+      });
+
+      contactClose.addEventListener("click", () => {
+        contactToggle.setAttribute("aria-expanded", "false");
+        contactPanel.hidden = true;
+      });
+    </script>
   </body>
 </html>

@@ -218,6 +218,106 @@ ul {
 .site-footer p {
   margin: 0;
 }
+.contact-widget {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 10;
+}
+.contact-toggle {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 13px 17px;
+  border: 0;
+  border-radius: 999px;
+  background: #cbed54;
+  color: var(--ink);
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(23, 32, 24, 0.25);
+  animation: contact-float 2.4s ease-in-out infinite;
+}
+.contact-pulse {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #0068ff;
+  animation: contact-pulse 1.8s infinite;
+}
+.contact-panel {
+  width: min(300px, calc(100vw - 40px));
+  margin-bottom: 12px;
+  padding: 18px;
+  background: #fff;
+  color: var(--ink);
+  box-shadow: 0 12px 35px rgba(23, 32, 24, 0.25);
+}
+.contact-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.contact-close {
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font-size: 24px;
+  cursor: pointer;
+}
+.contact-links {
+  display: grid;
+  gap: 8px;
+}
+.contact-links a {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 10px;
+  background: #e1ebdf;
+  color: var(--ink);
+  text-decoration: none;
+}
+.contact-links a:hover {
+  background: #cbed54;
+}
+.contact-links img,
+.email-icon {
+  display: inline-grid;
+  width: 25px;
+  height: 25px;
+  padding: 4px;
+  place-items: center;
+  border-radius: 6px;
+  background: #0068ff;
+  color: #fff;
+  font-weight: bold;
+}
+.contact-links a:nth-child(2) img {
+  background: #1877f2;
+}
+.contact-links a:nth-child(3) .email-icon {
+  background: #527226;
+}
+@keyframes contact-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+@keyframes contact-pulse {
+  70% {
+    box-shadow: 0 0 0 9px rgba(0, 104, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 104, 255, 0);
+  }
+}
 @keyframes slide-in {
   from {
     opacity: 0;
@@ -269,7 +369,8 @@ ul {
   .buttons {
     flex-wrap: wrap;
   }
-  section {
-    padding: 50px 0;
+  .contact-widget {
+    right: 14px;
+    bottom: 14px;
   }
 }

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zalo | Nguyen Khac Trieu</title>
+    <style>
+      :root {
+        color: #172018;
+        background: #f5f3ec;
+        font:
+          16px/1.5 Arial,
+          sans-serif;
+      }
+      body {
+        display: grid;
+        min-height: 100vh;
+        margin: 0;
+        place-items: center;
+      }
+      main {
+        width: min(90%, 420px);
+        padding: 32px;
+        background: #fff;
+        text-align: center;
+        box-shadow: 0 12px 35px rgba(23, 32, 24, 0.15);
+      }
+      .zalo-logo {
+        width: 56px;
+        height: 56px;
+        padding: 10px;
+        border-radius: 14px;
+        background: #0068ff;
+      }
+      .qr {
+        display: block;
+        width: min(100%, 280px);
+        margin: 20px auto;
+      }
+      .open-zalo {
+        display: inline-block;
+        padding: 10px 16px;
+        background: #0068ff;
+        color: #fff;
+        text-decoration: none;
+      }
+      .open-zalo:hover {
+        background: #0054cc;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <img
+        class="zalo-logo"
+        src="https://cdn.simpleicons.org/zalo/FFFFFF"
+        alt="Zalo"
+      />
+      <h1>Kết bạn Zalo</h1>
+      <p>Nguyen Khac Trieu<br />0364 910 537</p>
+      <img
+        class="qr"
+        src="https://api.qrserver.com/v1/create-qr-code/?size=280x280&amp;data=https%3A%2F%2Fzalo.me%2F84364910537"
+        alt="QR kết bạn Zalo của Nguyen Khac Trieu"
+      />
+      <p>Quét mã QR hoặc nhấn nút bên dưới để mở trang Zalo.</p>
+      <a
+        class="open-zalo"
+        href="https://zalo.me/84364910537"
+        target="_blank"
+        rel="noreferrer"
+        >Mở trang Zalo</a
+      >
+    </main>
+  </body>
+</html>
